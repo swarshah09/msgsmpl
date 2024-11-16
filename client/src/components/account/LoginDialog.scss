@@ -1,0 +1,67 @@
+@import "../../css-config/mixins.scss";
+
+.dialog {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+    background-image: url('../../assets/fgd.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+    
+    p {
+        font-size: 20px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+    }
+
+    .login-dialog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        color: #2ecc40;
+    }
+
+    .login-logo img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .google {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        button {
+            max-width: 320px;
+            display: flex;
+            padding: 0.5rem 1.4rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            vertical-align: middle;
+            align-items: center;
+            border-radius: 0.5rem;
+            // border: 1px solid rgba(0, 0, 0, 0.25);
+            border: none;
+            gap: 0.75rem;
+            color: rgb(65, 63, 63);
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all .6s ease;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// 368761745886-m3eh5vgp8jhd5qmufmc0g25a15l9p0u3.apps.googleusercontent.com
