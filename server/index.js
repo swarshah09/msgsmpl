@@ -28,19 +28,15 @@ app.use(cors());
 app.use('/', route);
 
 // ---------------------------------------------Deployement--------------------------------------------------------
-const __dirname1 = path.resolve();
+const __dirname1 = path.resolve(); //perfect 
 
-if (process.env.NODE_ENV === 'production') {    
+
     app.use(express.static(path.join(__dirname1, "../client/build"))); // Adjust the path to client build directory
 
-    app.get('*', (request, response) => {
-        response.sendFile(path.resolve(__dirname1, "..", "client", "build", "index.html")); // Adjust the path to index.html
-    })
-} else {
-    app.get("/", (request, response) => {
-        response.send("API running successfully");
-    });
-}
+    app.get('*', (req,res) => {
+        res.sendFile(path.join(__dirname1, "..", "client", "build", "index.html")); // Adjust the path to index.html
+    }) 
+
 
 // ---------------------------------------------Deployement--------------------------------------------------------
 Connection();
