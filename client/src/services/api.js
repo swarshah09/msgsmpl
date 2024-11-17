@@ -1,6 +1,8 @@
-import axios  from 'axios';
+import axios from 'axios';
 
-const url = 'http://localhost:8000'; //backend deployed link 
+const url = window.location.hostname === 'localhost'
+    ? 'http://localhost:8000'
+    : 'https://msgsmpl.onrender.com'; //backend deployed link 
 
 export const addUser = async (data) => {
     try {
@@ -8,7 +10,7 @@ export const addUser = async (data) => {
     } catch (error) {
         console.log('Error while calling addUser API ', error.message);
     }
-} 
+}
 
 export const getUsers = async () => {
     try {
